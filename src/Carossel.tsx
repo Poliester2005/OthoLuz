@@ -2,18 +2,18 @@ import { Carousel } from "@material-tailwind/react";
 
 export function CarouselDefault() {
   return (
-    <div className="h-screen w-full">
+    <div className="w-full">
       {" "}
       {/* Definindo um tamanho menor */}
       <Carousel
         transition={{ duration: 1 }}
-        className="rounded-xl h-4/5"
+        className="rounded-xl h-4/5 w-full max-w-screen overflow-hidden"
         navigation={false}
         loop={true}
         autoplay={true}
       >
-        <div>
-          <div className="absolute bg-white flex items-center justify-center h-80 w-1/2 left-1/2 bottom-0 transform -translate-x-1/2 rounded-xl text-center">
+        <div className="h-full">
+          <div className="absolute bg-white flex items-center justify-center h-60 w-1/2 left-1/2 bottom-0 transform -translate-x-1/2 rounded-xl text-center">
             <p className="text-orange-500 text-6xl">Ajudando a sua empresa crescer</p>
           </div>
           <img
