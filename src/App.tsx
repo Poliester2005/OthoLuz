@@ -1,6 +1,7 @@
 import { CarouselDefault } from "./Carossel";
 import Nav from "./Nav";
 import ProductCarousel from "./Produtos";
+import Footer from "./Footer";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Nav />
       <CarouselDefault />
       <ProductCarousel />
+      <Footer />
     </div>
   );
 }
