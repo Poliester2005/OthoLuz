@@ -1,33 +1,22 @@
+import { InstagramEmbed } from "react-social-media-embed";
+import Nav from "./Components/Nav";
+import Footer from "./Components/Footer";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
-import logo from "./assets/logo.png";
-import calling from "./assets/calling.png";
 
-export default function Footer() {
+export default function Contato() {
   return (
-    <footer className="bg-gray-300 text-orange-500 py-10">
-      <div className="container mx-auto px-6 flex justify-end">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-96">
-          {/* Lado Esquerdo - Imagens */}
-          <div className="flex items-center gap-4">
-            <img
-              src={logo}
-              alt="Imagem 1"
-              className="w-2/3 h-auto rounded-lg"
-            />
-            <img
-              src={calling}
-              alt="Imagem 2"
-              className="w-2/3 h-auto rounded-lg"
-            />
-          </div>
-
-          {/* Lado Direito - Contatos */}
-          <div className="">
-            <h3 className="text-2xl font-semibold mb-4">Entre em Contato</h3>
-
+    <>
+      <Nav />
+      <div className="w-full flex items-center justify-center ">
+        <div className="w-5/6 flex items-center justify-evenly p-10 bg-orange-500 m-10 rounded-3xl">
+          <InstagramEmbed
+            url="https://www.instagram.com/p/C4BQKGXgKHW/"
+            width={400}
+          />
+          <div className="h-full bg-red-900">
             {/* E-mails */}
-            <div className="mb-4">
+            <div className="mb-4 h-5/6">
               <div className="flex items-center mb-2">
                 <SiGmail className="text-red-500 text-xl mr-2" />
                 <a
@@ -57,7 +46,19 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="hover:text-green-400"
               >
-                +55 (48) 99836-0100 
+                +55 (48) 99836-0100
+              </a>
+            </div>
+
+            <div className="mb-4 flex items-center">
+              <FaWhatsapp className="text-green-500 text-xl mr-2" />
+              <a
+                href="https://wa.me/5548991069025"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-green-400"
+              >
+                +55 (48) 99106-9025
               </a>
             </div>
 
@@ -65,7 +66,7 @@ export default function Footer() {
             <div className="flex items-center">
               <FaInstagram className="text-pink-500 text-xl mr-2" />
               <a
-                href="https://instagram.com/acessoria_comercialotholuz"
+                href="https://instagram.com/assessoria_comercialotholuz"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-pink-400"
@@ -77,13 +78,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Direitos Autorais */}
-      <div className="text-center mt-10 border-t border-gray-700 pt-4">
-        <p>
-          &copy; {new Date().getFullYear()} Sua Empresa. Todos os direitos
-          reservados.
-        </p>
-      </div>
-    </footer>
+      <Footer />
+    </>
   );
 }
