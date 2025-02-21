@@ -18,8 +18,8 @@ export default function ProdutosAll() {
           Nossos Produtos
         </p>
       </div>
-      <DropdownProducts title="Elétrica" jsonPath="src\data\produtos.json" />
-      <DropdownProducts title="Construção" jsonPath="src\data\produtos.json" />
+      <DropdownProducts title="Elétrica" jsonPath="../public/produtos.json" />
+      <DropdownProducts title="Construção" jsonPath="../public/produtos.json" />
       <Footer />
     </>
   );
