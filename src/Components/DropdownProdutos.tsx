@@ -39,10 +39,10 @@ const DropdownProducts = ({ title, jsonPath }: DropdownProductsProps) => {
     <div className="w-full flex flex-col items-center mt-6">
       {/* Botão Dropdown */}
       <div
-        className="w-5/6 flex items-center justify-between h-24 text-center text-4xl bg-orange-100 rounded-lg px-6 cursor-pointer transition-all duration-300"
+        className="w-5/6 flex items-center justify-between h-24 text-center text-4xl bg-blue-800 rounded-lg px-6 cursor-pointer transition-all duration-300"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <p className="flex-1 text-center">{title}</p>
+        <p className="flex-1 text-center text-orange-500 font-bold">{title}</p>
         <span className="text-2xl">{isOpen ? "▲" : "▼"}</span>
       </div>
 

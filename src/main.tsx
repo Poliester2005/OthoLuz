@@ -2,11 +2,11 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import { ThemeProvider } from "@material-tailwind/react";
 import { BrowserRouter, Route, Routes } from "react-router";
-import Home from "./Home";
-import Sobre from "./Sobre";
-import ProdutosAll from "./ProdutosAll";
-import NotFound from "./NotFound";
-import Contato from "./Contato";
+import Home from "./pages/Home";
+import Sobre from "./pages/Sobre";
+import ProdutosAll from "./pages/ProdutosAll";
+import NotFound from "./pages/NotFound";
+import Contato from "./pages/Contato";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLDataElement).render(
   <BrowserRouter>

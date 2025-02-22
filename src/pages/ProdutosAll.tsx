@@ -1,8 +1,8 @@
-import Footer from "./Components/Footer";
-import Nav from "./Components/Nav";
+import Footer from "../Components/Footer";
+import Nav from "../Components/Nav";
 
 
-import DropdownProducts from "./Components/DropdownProdutos"
+import DropdownProducts from "../Components/DropdownProdutos"
 
 
 export default function ProdutosAll() {
