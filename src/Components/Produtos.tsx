@@ -16,7 +16,8 @@ const products = [
   },
   {
     name: "Conector para Haste",
-    description: "Conectores para Haste ideais para conexões em sistemas de aterramento.",
+    description:
+      "Conectores para Haste ideais para conexões em sistemas de aterramento.",
     image: "https://i.imgur.com/qRsHmBG.png",
   },
   {
@@ -31,7 +32,8 @@ const products = [
   },
   {
     name: "Caixa de Aterramento",
-    description: "Protege contra descargas atmosféricas, transferindo-as para a terra.",
+    description:
+      "Protege contra descargas atmosféricas, transferindo-as para a terra.",
     image: "https://i.imgur.com/LxYCOFM.png",
   },
 ];
@@ -64,8 +66,8 @@ export default function ProductCarousel() {
     autoplay: true,
     autoplaySpeed: 3000,
     arrows: true,
-    prevArrow: <CustomPrevArrow />, 
-    nextArrow: <CustomNextArrow />, 
+    prevArrow: <CustomPrevArrow />,
+    nextArrow: <CustomNextArrow />,
     responsive: [
       { breakpoint: 1024, settings: { slidesToShow: 2 } },
       { breakpoint: 768, settings: { slidesToShow: 1, arrows: false } },
@@ -74,26 +76,42 @@ export default function ProductCarousel() {
 
   return (
     <div className="w-screen max-w-screen-xl mx-auto px-4 py-8 min-h-[600px] relative bg-white">
-      <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">Nossos Produtos</h2>
+      <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">
+        Nossos Produtos
+      </h2>
       <Slider {...settings}>
-        {products.map((product, index) => (
-          <div key={index} className="p-4">
-            <div className="bg-white shadow-xl rounded-lg p-6 transition-transform hover:scale-105">
-              <img
-                src={product.image}
-                alt={product.name}
-                className="w-full h-52 object-cover rounded-md"
-              />
-              <h3 className="text-xl font-semibold mt-4 text-gray-800">{product.name}</h3>
-              <p className="text-gray-600">{product.description}</p>
-              <div className="flex justify-center items-center mt-4">
-                <button className="bg-orange-500 hover:bg-orange-600 text-white w-1/2 px-5 py-2 rounded-md transition">
-                  Cotar
-                </button>
+        {products.map((product, index) => {
+          const whatsappMessage = encodeURIComponent(
+            `Olá, gostaria de saber mais sobre o produto: ${product.name}.`
+          );
+          const whatsappLink = `https://wa.me/5548998360100?text=${whatsappMessage}`;
+
+          return (
+            <div key={index} className="p-4">
+              <div className="bg-white shadow-xl rounded-lg p-6 transition-transform hover:scale-105">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-52 object-cover rounded-md"
+                />
+                <h3 className="text-xl font-semibold mt-4 text-gray-800">
+                  {product.name}
+                </h3>
+                <p className="text-gray-600">{product.description}</p>
+                <div className="flex justify-center items-center mt-4 text-center">
+                  <a
+                    href={whatsappLink}
+                    className="bg-orange-500 hover:bg-orange-600 text-white w-1/2 px-5 py-2 rounded-md transition"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Cotar
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </Slider>
     </div>
   );
