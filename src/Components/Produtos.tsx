@@ -72,7 +72,7 @@ const CustomNextArrow = (props) => {
   );
 };
 
-export default function ProductCarousel() {
+export default function ProductCarousel({ darkMode }: { darkMode: boolean }) {
   const settings = {
     dots: true,
     infinite: true,
@@ -102,25 +102,39 @@ export default function ProductCarousel() {
   };
 
   return (
-    <div className="w-screen max-w-screen-xl mx-auto px-4 py-8 min-h-[600px] relative">
-      <h2 className="text-3xl font-bold text-gray-800 text-center mb-8">
+    <div
+      className={`w-screen max-w-screen-xl mx-auto px-4 py-8 min-h-[600px] relative ${darkMode ? "bg-gray-900" : "bg-white"}`}
+    >
+      <h2 className={`text-3xl font-bold text-center mb-8 ${darkMode ? "text-white" : "text-gray-800"}`}>
         Nossos Produtos
       </h2>
       <Slider {...settings}>
         {products.map((product) => (
           <div key={product.id} className="p-4">
-            <div className="bg-white shadow-xl rounded-lg p-6 transition-transform hover:scale-105">
+            <div
+              className={`bg-white shadow-xl rounded-lg p-6 transition-transform hover:scale-105 ${
+                darkMode ? "bg-gray-800" : "bg-white"
+              }`}
+            >
               <img
                 src={product.image}
                 alt={product.name}
                 className="w-full h-52 object-cover rounded-md"
               />
-              <h3 className="text-xl font-semibold mt-4 text-gray-800">
+              <h3
+                className={`text-xl font-semibold mt-4 ${darkMode ? "text-white" : "text-gray-800"}`}
+              >
                 {product.name}
               </h3>
-              <p className="text-gray-600">{product.description}</p>
+              <p className={`${darkMode ? "text-gray-300" : "text-gray-600"}`}>
+                {product.description}
+              </p>
               <div className="flex justify-center items-center mt-4">
-                <button className="bg-orange-500 text-white w-1/2 px-5 py-2 rounded-md hover:bg-orange-600 transition">
+                <button
+                  className={`${
+                    darkMode ? "bg-orange-400 hover:bg-orange-500" : "bg-orange-500 hover:bg-orange-600"
+                  } text-white w-1/2 px-5 py-2 rounded-md transition`}
+                >
                   Cotar
                 </button>
               </div>

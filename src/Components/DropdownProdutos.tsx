@@ -4,14 +4,14 @@ import { useState, useEffect } from "react";
 interface Product {
   id: number;
   nome: string;
-  descrição: string;
-  imagem?: string; // O campo imagem pode estar ausente
+  descricao: string;
+  imagem?: string;
 }
 
 // Definindo o tipo das props do componente
 interface DropdownProductsProps {
   title: string;
-  jsonPath: string; // Caminho do JSON
+  jsonPath: string;
 }
 
 const DropdownProducts = ({ title, jsonPath }: DropdownProductsProps) => {
@@ -23,26 +23,32 @@ const DropdownProducts = ({ title, jsonPath }: DropdownProductsProps) => {
     fetch(jsonPath)
       .then((response) => response.json())
       .then((data) => {
-        // Mapear os produtos para garantir que o formato esteja correto
-        const formattedProducts = data.map((product: any, index: number) => ({
-          id: index, // Gera um ID caso o JSON não tenha
-          nome: product.Nome, // Ajuste para a chave correta
-          descrição: product.Descricao, // Ajuste para a chave correta
-          imagem: product.Imagem || "https://picsum.photos/200?random=" + index, // Imagem default se não houver
-        }));
-        setProducts(formattedProducts);
+        const categoriaEncontrada = data.Materiais.find(
+          (cat: any) => cat.Categoria === title
+        );
+        if (categoriaEncontrada) {
+          const formattedProducts = categoriaEncontrada.Produtos.map(
+            (product: any, index: number) => ({
+              id: index,
+              nome: product.Nome,
+              descricao: product.Descrição,
+              imagem: product.Imagem,
+            })
+          );
+          setProducts(formattedProducts);
+        }
       })
       .catch((error) => console.error("Erro ao carregar produtos:", error));
-  }, [jsonPath]);
+  }, [jsonPath, title]);
 
   return (
     <div className="w-full flex flex-col items-center mt-6">
       {/* Botão Dropdown */}
       <div
-        className="w-5/6 flex items-center justify-between h-24 text-center text-4xl bg-blue-800 rounded-lg px-6 cursor-pointer transition-all duration-300"
+        className="w-5/6 flex items-center justify-between h-24 text-center text-4xl bg-orange-100 rounded-lg px-6 cursor-pointer transition-all duration-300"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <p className="flex-1 text-center text-orange-500 font-bold">{title}</p>
+        <p className="flex-1 text-center">{title}</p>
         <span className="text-2xl">{isOpen ? "▲" : "▼"}</span>
       </div>
 
@@ -63,7 +69,7 @@ const DropdownProducts = ({ title, jsonPath }: DropdownProductsProps) => {
               className="w-64 h-64 object-cover rounded-md mb-4"
             />
             <h3 className="text-lg font-semibold">{product.nome}</h3>
-            <p className="text-gray-600">{product.descrição}</p>
+            <p className="text-gray-600">{product.descricao}</p>
           </div>
         ))}
       </div>

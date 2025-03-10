@@ -1,46 +1,124 @@
-[
+{
+  "Materiais": [
     {
-      "Nome": "Conector Derivação Perfurante",
-      "Descricao": "Conexões de derivação por perfuração em condutores isolados de cobre e/ou alumínio, em redes secundárias e ramais aéreos de baixa tensão."
+      "Categoria": "Material Elétrico/Construção",
+      "Produtos": [
+        {
+          "Nome": "Eletroduto",
+          "Descrição": "Eletrodutos são os dutos que protegem os cabos e condutores de energia elétrica instalados em camadas subterrâneas ou instalações aparentes.",
+          "Imagem": "https://i.imgur.com/eu6jhbu.png"
+        },
+        {
+          "Nome": "Relé Fotoelétrico",
+          "Descrição": "Dispositivos para controle automático da iluminação.",
+          "Imagem": "https://i.imgur.com/WXDxwgf.png"
+        },
+        {
+          "Nome": "Base para Relé Fotoelétrico",
+          "Descrição": "Possibilita a colocação em duas posições no suporte e após fixada não irá girar, permitindo ao operador colocar ou retirar o relé com apenas uma mão.",
+          "Imagem": "https://i.imgur.com/NAFcNgC.png"
+        },
+        {
+          "Nome": "Caixa de Aterramento",
+          "Descrição": "Utilizada para proteger o usuário do equipamento de descargas atmosféricas, transferindo essa descarga para a terra.",
+          "Imagem": "https://i.imgur.com/LxYCOFM.png"
+        },
+        {
+          "Nome": "Curva para Eletroduto",
+          "Descrição": "Utilizado para fazer desvios em ângulo de 90° em eletrodutos, permitindo que os cabos elétricos sejam direcionados para outros locais.",
+          "Imagem": "https://i.imgur.com/fJfuUOc.png"
+        },
+        {
+          "Nome": "Luva Eletroduto",
+          "Descrição": "São utilizadas para emendar dois tubos de eletroduto e são fabricadas em diferentes tamanhos.",
+          "Imagem": "https://i.imgur.com/siRWweC.png"
+        }
+      ]
     },
     {
-      "Nome": "Eletroduto",
-      "Descricao": "Eletrodutos são os dutos que protegem os cabos e condutores de energia elétrica instalados em camadas subterrâneas ou instalações aparentes."
-    },
-    {
-      "Nome": "Conector Para Haste",
-      "Descricao": "Conectores para Haste são ideais para realizar conexões de alta qualidade em sistemas de aterramento. Utilizadopara conectar haste-cabo oferecendo alta condutividade elétrica e resistência à corrosão."
-    },
-    {
-      "Nome": "Conector Split Bolt",
-      "Descricao": "Conexão em derivação de condutores de cobre."
-    },
-    {
-      "Nome": "Haste Aterramento",
-      "Descricao": "é um componente que direciona a corrente elétrica para o solo, evitando danos a pessoas e equipamentos"
-    },
-    {
-      "Nome": "Relé Fotoelétrico",
-      "Descricao": "dispositivos para controle automático da iluminação"
-    },
-    {
-      "Nome": "Base para ReléFotoelétrico",
-      "Descricao": "Possibilita a colocação em duas posições\nno suporte e após fixada não irá girar, permitindo ao operador colocar ou retirar o rele\ncom apenas uma mão."
-    },
-    {
-      "Nome": "Grampo para Aterramento Duplo",
-      "Descricao": "Conexão de um condutor a uma haste de aterramento ou tubo IPS,\npermite instalar o condutor em paralelo ou a 90º."
-    },
-    {
-      "Nome": "Caixa de Aterramento",
-      "Descricao": ""
-    },
-    {
-      "Nome": "Curva para Eletroduto",
-      "Descricao": "utilizado para fazer desvios em ângulo de 90° em eletrodutos, permitindo que os cabos elétricos sejam direcionados para outros locais"
-    },
-    {
-      "Nome": "Luva Eletroduto",
-      "Descricao": "São utilizadas para emendar dois tubos de eletroduto e são fabricadas em diferentes tamanhos."
+      "Categoria": "Eletroferragens",
+      "Produtos": [
+        {
+          "Nome": "Conector Derivação Perfurante",
+          "Descrição": "Conexões de derivação por perfuração em condutores isolados de cobre e/ou alumínio, em redes secundárias e ramais aéreos de baixa tensão.",
+          "Imagem": "https://imgur.com/eu6jhbu"
+        },
+        {
+          "Nome": "Suporte Para Transformador",
+          "Descrição": "O Suporte Especial para Transformador é projetado para acomodar diferentes tamanhos e tipos de transformadores.",
+          "Imagem": "https://i.imgur.com/prKnNcV.png"
+        },
+        {
+          "Nome": "Suporte para Transformador DT",
+          "Descrição": "O suporte para transformador duplo T é utilizado para instalação de transformadores de distribuição de energia elétrica junto ao poste de concreto duplo T, suportando todos os esforços de um equipamento pesado.",
+          "Imagem": "https://imgur.com/eu6jhbu"
+        },
+        {
+          "Nome": "Suporte Horizontal Isolador Pilar",
+          "Descrição": "Os Suportes tipo Pilar para isoladores são utilizados para afastamento e fixação do isolador à cruzeta, garantindo o alinhamento e perfeita instalação.",
+          "Imagem": "https://imgur.com/eu6jhbu"
+        },
+        {
+          "Nome": "Suporte L",
+          "Descrição": "Suporte metálico utilizado em estruturas elétricas.",
+          "Imagem": "https://imgur.com/eu6jhbu"
+        },
+        {
+          "Nome": "Armação Secundária",
+          "Descrição": "As Armações Secundárias ou Press Bow (leves ou pesadas) são dispositivos essenciais em toda rede aérea, realizando a ancoragem dos cabos de baixa tensão.",
+          "Imagem": "https://imgur.com/eu6jhbu"
+        },
+        {
+          "Nome": "Gancho Olhal",
+          "Descrição": "Ferramenta versátil e robusta que desempenha um papel fundamental em diversas atividades de elevação.",
+          "Imagem": "https://imgur.com/eu6jhbu"
+        },
+        {
+          "Nome": "Chapa Estai",
+          "Descrição": "A Chapa de Estai é projetada para fornecer estabilidade estrutural aos postes e torres da rede elétrica.",
+          "Imagem": "https://imgur.com/eu6jhbu"
+        },
+        {
+          "Nome": "Suporte Z",
+          "Descrição": "Cuja função é servir como suporte e promover pequenos afastamentos.",
+          "Imagem": "https://imgur.com/eu6jhbu"
+        },
+        {
+          "Nome": "Porca Olhal",
+          "Descrição": "Desenvolvidos para atividades de elevação, movimentação ou sustentação de carga e equipamentos como painéis, máquinas, motores, etc.",
+          "Imagem": "https://imgur.com/eu6jhbu"
+        },
+        {
+          "Nome": "Conector Para Haste",
+          "Descrição": "Conectores para Haste são ideais para realizar conexões de alta qualidade em sistemas de aterramento. Utilizado para conectar haste-cabo, oferecendo alta condutividade elétrica e resistência à corrosão.",
+          "Imagem": "https://imgur.com/eu6jhbu"
+        },
+        {
+          "Nome": "Parafuso Olhal",
+          "Descrição": "Podem ser utilizados para a suspensão de peças e motores; levantamento de estruturas metálicas.",
+          "Imagem": "https://imgur.com/eu6jhbu"
+        },
+        {
+          "Nome": "Haste Âncora Soldada",
+          "Descrição": "A haste âncora é enterrada ao solo e tem a finalidade de fazer a ancoragem dos postes, garantindo o alinhamento e perfeita instalação.",
+          "Imagem": "https://imgur.com/eu6jhbu"
+        },
+        {
+          "Nome": "Conector Split Bolt",
+          "Descrição": "Conexão em derivação de condutores de cobre.",
+          "Imagem": "https://imgur.com/eu6jhbu"
+        },
+        {
+          "Nome": "Haste Aterramento",
+          "Descrição": "Componente que direciona a corrente elétrica para o solo, evitando danos a pessoas e equipamentos.",
+          "Imagem": "https://imgur.com/eu6jhbu"
+        },
+        {
+          "Nome": "Grampo para Aterramento Duplo",
+          "Descrição": "Conexão de um condutor a uma haste de aterramento ou tubo IPS, permitindo instalar o condutor em paralelo ou a 90°.",
+          "Imagem": "https://imgur.com/eu6jhbu"
+        }
+      ]
     }
   ]
+}
