@@ -1,7 +1,7 @@
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
-import logo from "../assets/logo.png";
 import calling from "../assets/calling.png";
+import logo from "../assets/logo.png";
 
 export default function Footer() {
   return (
@@ -57,7 +57,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="hover:text-green-400"
               >
-                +55 (48) 99836-0100 
+                +55 (48) 99836-0100
               </a>
             </div>
 

@@ -1,8 +1,12 @@
 import { Carousel } from "@material-tailwind/react";
+import imagem1 from "../assets/imagem1.jpeg";
+import imagem2 from "../assets/imagem2.jpeg";
+import imagem3 from "../assets/imagem3.jpeg";
+import imagem4 from "../assets/imagem4.jpeg";
 
 export function CarouselDefault() {
   return (
-    <div className="w-full h-[88vh]">
+    <div className="w-full h-[88vh] bg-gray-300">
       {/* Definindo um tamanho menor */}
       <Carousel
         transition={{ duration: 1 }}
@@ -11,28 +15,38 @@ export function CarouselDefault() {
         loop={true}
         autoplay={true}
       >
-        <div className="h-full">
-          <div className="absolute bg-white flex items-center justify-center h-60 w-1/2 left-1/2 bottom-0 transform -translate-x-1/2 rounded-xl text-center">
-            <p className="text-orange-500 text-6xl">Ajudando a sua empresa crescer</p>
-          </div>
+        <div className="h-full flex justify-center items-center">
           <img
-            src="https://st.depositphotos.com/1594308/3526/i/450/depositphotos_35269821-stock-photo-discussing-project.jpg"
-            alt="Construction 1"
-            className="h-full w-full object-cover"
+            src={imagem1}
+            alt="Imagem 1"
+            className="h-full object-cover"
           />
         </div>
 
-        <img
-          src="https://st.depositphotos.com/1907633/2378/i/380/depositphotos_23783565-stock-photo-businessman-hand-working-with-new.jpg"
-          alt="Construction 2"
-          className="h-full w-full object-cover"
-        />
-        <img
-          src="https://st.depositphotos.com/1594308/4627/i/380/depositphotos_46271085-stock-photo-businessmen-pointing-at-touchpad.jpg"
-          alt="Construction 3"
-          className="h-full w-full object-cover"
-        />
-      </Carousel>
-    </div>
+        <div className="h-full flex justify-center items-center">
+          <img
+            src={imagem2}
+            alt="Imagem 2"
+            className="h-full object-cover"
+          />
+        </div>
+
+        <div className="h-full flex justify-center items-center">
+          <img
+            src={imagem3}
+            alt="Imagem 3"
+            className="h-full object-cover"
+          />
+        </div>
+        <div className="h-full flex justify-center items-center">
+          <img
+            src={imagem4}
+            alt="Imagem 4"
+            className="h-full object-cover"
+          />
+        </div>
+
+      </Carousel >
+    </div >
   );
 }
